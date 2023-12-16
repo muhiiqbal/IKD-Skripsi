@@ -1,18 +1,18 @@
 @extends('layouts.main')
 @section('headuser', 'active')
 @section('uluser', 'active')
-@if (request('role') == 'dosen')
+{{-- @if (request('role') == 'dosen')
     @section('alldosen','active')
 @endif
 
 @if (request('role') == 'admin')
     @section('alladmin','active')
-@endif
+@endif --}}
 @section('content')
 <div class="page-title">
     <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last">
-            <h3>{{Str::title('add ' . request('role'))}}</h3>
+            {{-- <h3>{{Str::title('add ' . request('role'))}}</h3> --}}
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -77,7 +77,7 @@
                                             <label for="first-name-icon">Role</label>
                                             <div class="position-relative">
                                                 <input type="text" class="form-control"
-                                                    placeholder="role" id="first-name-icon" value="{{Str::title(request('role'))}}" disabled>
+                                                    placeholder="role" id="first-name-icon" value="{{Str::title(request('role'))}}">
                                                 <input type="hidden" class="form-control" placeholder="role" id="first-name-icon" name="role" value="{{request('role')}}">
                                                 <div class="form-control-icon">
                                                     <i class="bi bi-person"></i>

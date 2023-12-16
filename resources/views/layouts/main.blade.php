@@ -164,7 +164,7 @@
                         <a href="/all-user?role=dosen">Dosen</a>
                     </li>
                     <li class="submenu-item @yield('alladmin')">
-                        <a href="/all-user?role=admin">Admin</a>
+                        <a href="/all-user?role=admin">User Management</a>
                     </li>
 
                 </ul>

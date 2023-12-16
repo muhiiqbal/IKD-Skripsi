@@ -41,6 +41,8 @@ class PagesController extends Controller
 
         $dosen = User::where('role', 'dosen')->get();
         $admin = User::where('role', 'admin')->get();
+        $kaprodi = User::where('role','kaprodi')->get();
+
         if (Auth::user()->role == 'admin') {
             $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
         } else {
@@ -56,6 +58,19 @@ class PagesController extends Controller
             'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5),
             'data' => $data,
         ]);
+    }
+    
+    public function kaprodi()
+    {
+        $dosen = User::where('role', 'kaprodi')->get();
+
+        return view('pages.kaprodi', [
+            'total_dosen' => count($dosen) ,
+            'dosen' => $dosen,
+            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        ]);
+        
+        
     }
     public function pdf(User $user)
     {

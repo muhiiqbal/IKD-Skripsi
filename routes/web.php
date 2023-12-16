@@ -22,6 +22,7 @@ use App\Http\Controllers\MatkulController;
 
 
 Route::get('/', [PagesController::class, 'dashboard']);
+Route::get('/kaprodi', [PagesController::class, 'kaprodi']);
 Route::get('/ddashboard', [PagesController::class, 'ddashboard']);
 Route::get('/all-user', [PagesController::class, 'alluser']);
 Route::get('/all-user/add', [UserController::class, 'adduser']);

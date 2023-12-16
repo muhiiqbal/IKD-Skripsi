@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 02:29 PM
+-- Generation Time: Sep 01, 2023 at 09:13 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -147,7 +147,10 @@ INSERT INTO `ambils` (`id`, `user_id`, `matkul_id`, `kelas_id`, `created_at`, `u
 (105, 108, 2, 2, '2023-02-02 19:28:37', '2023-02-02 19:28:37'),
 (106, 109, 1, 1, '2023-02-05 07:08:39', '2023-02-05 07:08:39'),
 (107, 110, 1, 1, '2023-02-22 06:05:20', '2023-02-22 06:05:20'),
-(108, 112, 1, 1, '2023-02-22 06:08:09', '2023-02-22 06:08:09');
+(108, 112, 1, 1, '2023-02-22 06:08:09', '2023-02-22 06:08:09'),
+(109, 112, 4, 1, '2023-08-31 07:41:57', '2023-08-31 07:41:57'),
+(110, 112, 4, 1, '2023-08-31 07:41:57', '2023-08-31 07:41:57'),
+(111, 112, 4, 1, '2023-08-31 07:41:57', '2023-08-31 07:41:57');
 
 -- --------------------------------------------------------
 
@@ -1415,7 +1418,8 @@ INSERT INTO `users` (`id`, `name`, `staff`, `kode`, `telp`, `email`, `email_veri
 (108, 'dosen101', NULL, NULL, NULL, 'dosen101@gmail.com', NULL, '$2y$10$PmQCKBxCf7lsJv34/RppquF0f7MavMu4PlMkPeyAnfXyHoQjwYYiK', 'dosen', NULL, '2023-02-02 19:28:01', '2023-02-02 19:28:01'),
 (109, 'dosen102', NULL, NULL, NULL, 'dosen102@gmail.com', NULL, '$2y$10$v2sI/qWVC06G6RW2rA9nMeCwejGYlli5yZUSJpigi7zH8nOcH8TP6', 'dosen', NULL, '2023-02-05 06:01:06', '2023-02-05 06:01:06'),
 (110, 'coba', NULL, NULL, NULL, 'coba@gmail.com', NULL, '$2y$10$zZSYuD0YB8edX4FMPc.9SebMILGTArkbItmKq4x7YUMvJGpKL67cW', 'dosen', NULL, '2023-02-22 06:04:51', '2023-02-22 06:04:51'),
-(112, 'coba', NULL, NULL, NULL, 'coba12@gmail.com', NULL, '$2y$10$KHDKBLkHdGNIREP3yIvENeVM/wfm6r8xERBPWnFsbnzrgn9j0KNne', 'dosen', NULL, '2023-02-22 06:05:09', '2023-02-22 06:05:09');
+(112, 'coba', NULL, NULL, NULL, 'coba12@gmail.com', NULL, '$2y$10$KHDKBLkHdGNIREP3yIvENeVM/wfm6r8xERBPWnFsbnzrgn9j0KNne', 'dosen', NULL, '2023-02-22 06:05:09', '2023-02-22 06:05:09'),
+(113, 'admin3', '909', '909', '9090909', 'admin21@gmail.com', NULL, '$2y$10$6vsdw9nPhPalmWlPn0wbeeh7dGK2volmCNdF4Px4q.o.hNhFxamyC', 'admin', NULL, '2023-08-31 07:39:36', '2023-08-31 07:39:36');
 
 --
 -- Indexes for dumped tables
@@ -1595,7 +1599,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ambils`
 --
 ALTER TABLE `ambils`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `csvimports`
@@ -1745,7 +1749,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
