@@ -72,6 +72,20 @@ class PagesController extends Controller
         
         
     }
+
+    public function dekan()
+    {
+        $dosen = User::where('role', 'dekan')->get();
+
+        return view('pages.dekan', [
+            'total_dosen' => count($dosen) ,
+            'dosen' => $dosen,
+            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        ]);
+        
+        
+    }
+
     public function pdf(User $user)
     {
         $pdf = FacadePdf::setOption(['orientation' => 'l'])->loadview('pdff', [

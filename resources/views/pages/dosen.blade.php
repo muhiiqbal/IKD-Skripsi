@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                     <h6 class="text-muted font-semibold">Dosen</h6>
-                                    <h6 class="font-extrabold mb-0">10</h6>
+                                    <h6 class="font-extrabold mb-0">104</h6>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                     <h6 class="text-muted font-semibold">Admin</h6>
-                                    <h6 class="font-extrabold mb-0">10</h6>
+                                    <h6 class="font-extrabold mb-0">5</h6>
                                 </div>
                                 {{-- Tambahan --}}
                                 {{-- <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -58,7 +58,7 @@
                             <div class="row">
                                 <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                     <div class="stats-icon green mb-2">
-                                        <i class="iconly-boldAdd-User"></i>
+                                        <i class="iconly-boldProfile"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -75,7 +75,7 @@
                             <div class="row">
                                 <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                     <div class="stats-icon red mb-2">
-                                        <i class="iconly-boldBookmark"></i>
+                                        <i class="iconly-boldProfile"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -141,8 +141,8 @@
                             <img src="assets/images/faces/1.jpg" alt="Face 1">
                         </div>
                         <div class="ms-3 name">
-                            <h5 class="font-bold">nama Admin Login</h5>
-                            <h6 class="text-muted mb-0">email</h6>
+                            <h5 class="font-bold">Dosen113</h5>
+                            <h6 class="text-muted mb-0">dosen113@gmail.com</h6>
                         </div>
                     </div>
                 </div>
@@ -157,8 +157,26 @@
                             <img src="assets/images/faces/4.jpg">
                         </div>
                         <div class="name ms-4">
-                            <h5 class="mb-1">Dosen 1</h5>
-                            <h6 class="text-muted mb-0">RANK</h6>
+                            <h5 class="mb-1">Dosen1</h5>
+                            <h6 class="text-muted mb-0">1</h6>
+                        </div>
+                    </div>
+                    <div class="recent-message d-flex px-4 py-3">
+                        <div class="avatar avatar-lg">
+                            <img src="assets/images/faces/5.jpg">
+                        </div>
+                        <div class="name ms-4">
+                            <h5 class="mb-1">Dosen3</h5>
+                            <h6 class="text-muted mb-0">2</h6>
+                        </div>
+                    </div>
+                    <div class="recent-message d-flex px-4 py-3">
+                        <div class="avatar avatar-lg">
+                            <img src="assets/images/faces/1.jpg">
+                        </div>
+                        <div class="name ms-4">
+                            <h5 class="mb-1">Dosen8</h5>
+                            <h6 class="text-muted mb-0">3</h6>
                         </div>
                     </div>
                     <div class="px-4">

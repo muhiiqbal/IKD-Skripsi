@@ -246,7 +246,7 @@
                     </div>
                     <div class="float-end">
                         <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                                href="https://saugi.me">Saugi & Haris Adiyatma Farhan</a></p>
+                                href="https://saugi.me">Saugi & Muhammad Iqbal</a></p>
                     </div>
                 </div>
             </footer>
