@@ -76,9 +76,7 @@
                     </ul>
                 </div>
             </li>
-
             <li class="sidebar-title">Menu</li>
-
             <li
                 class="sidebar-item @yield('dashboard') ">
                 <a href="/" class='sidebar-link'>
@@ -98,7 +96,7 @@
                 class="sidebar-item @yield('headproduct') has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-clipboard-check-fill"></i>
-                    <span>Nilai Manajemen</span>
+                    <span>Manajemen Nilai</span>
                 </a>
                 <ul class="submenu @yield('ulnilai')">
                     <li class="submenu-item @yield('inputnilai')">
@@ -171,7 +169,7 @@
             </li>
 
         </ul>
-        @else
+        @elseif (Auth::user()->role == 'dekan')
         <ul class="menu">
             <li>
                 <div class="dropdown">
@@ -197,24 +195,46 @@
                     </ul>
                 </div>
             </li>
-
             <li class="sidebar-title">Menu</li>
-            
-            {{-- <li
-                class="sidebar-item @yield('dosen') ">
-                <a href="/dosen" class='sidebar-link'>
-                    <i class="bi bi-grid-fill"></i>
-                    <span>Dosen</span>
-                </a>
-            </li> --}}
-            
-            <li class="sidebar-item @yield('dashboard') ">
-            <a href="/" class='sidebar-link'>
+            <li class="sidebar-item @yield('dekan') ">
+            <a href="/de" class='sidebar-link'>
                 <i class="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
             </a>
             </li>
-            
+            <li class="sidebar-item @yield('headproduct') has-sub">
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-people-fill"></i>
+                    <span>Program Studi</span>
+                </a>
+                <ul class="submenu @yield('ulproduct')">
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/mmatkul">Fakultas Ilmu Komputer</a>
+                    </li>
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/mmatkul">Fakultas Ekonimi dan Bisnis</a>
+                    </li>
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/mmatkul">Fakultas Ilmu Budaya</a>
+                    </li>
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/mmatkul">Fakultas Teknik</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item @yield('headproduct') has-sub">
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-people-fill"></i>
+                    <span>Dosen</span>
+                </a>
+                <ul class="submenu @yield('uluser')">
+                    <li class="submenu-item @yield('alldosen')">
+                        <a href="/all-user?role=dosen">Dosen</a>
+                    </li>
+                </ul>
+            </li>
+            @elseif (Auth::user()->role == 'kaprodi')
+
             {{-- <li
                 class="sidebar-item @yield('inputnilai') ">
                 <a href="/input-nilai" class='sidebar-link'>

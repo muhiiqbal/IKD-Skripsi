@@ -210,9 +210,9 @@
         </div>
     </section>
 </div>
-@else
+@elseif (Auth::user()->role == 'dekan')
 <div class="page-heading">
-    <h3>Dashboard Dosen</h3>
+    <h3>Dashboard Dekan</h3>
 </div>
 <div class="page-content">
     <section class="row">
@@ -335,19 +335,26 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>rata-rata</th>
+                                            <th>keterangan</th>
+                                            <th>Rangking</th>
+                                            <th>Detail</th>
                                             {{-- <th>Phone</th> --}}
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($dosen as $a)
+                                        @foreach ($master as $a)
                                         <tr>
-                                            <td>{{$a->name}}</td>
-                                            <td>{{$a->email}}</td>
+                                            <td>{{$a->user->name}}</td>
+                                            <td>{{$a->user->email}}</td>
+                                            <td>{{$a->rata}}</td>
+                                            <td>{{$a->keterangan}}</td>
+                                            <td>{{$a->rank}}</td>
                                             {{-- <td>{{$a->phone}}</td> --}}
                                             <td>
                                                 <div class="btn-group mb-1">
-                                                    <a href="/input-nilai/{{$a->id}}/pilih-matkul" class="btn btn-primary btn-sm">Pilih Matkul</a>
+                                                    <a href="/pdf/{{$a->user_id}}" class="btn btn-primary btn-sm">Download PDF</a>
                                                 </div>
                                             </td>
                                         </tr>

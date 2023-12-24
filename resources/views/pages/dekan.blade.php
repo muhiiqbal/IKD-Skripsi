@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('dekan','active')
 @section('content')
-
+{{-- 
 <div id="app">
     <div id="sidebar" class="active">
         <div class="sidebar-wrapper active">
@@ -27,7 +27,7 @@
     <div class="card">
         <div class="card-body py-4 px-4">
             <div class="d-flex align-items-center">
-                <div class="avatar avatar-lg">
+                <div class="avatar avatar-xl">
                     <img src="assets/images/faces/1.jpg" alt="Face 1">
                 </div>
                 <div class="ms-3 name">
@@ -48,6 +48,24 @@
                 <i class="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
             </a>
+            <li
+                class="sidebar-item @yield('headproduct') has-sub">
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-people-fill"></i>
+                    <span>Perkuliahan</span>
+                </a>
+                <ul class="submenu @yield('ulproduct')">
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/mmatkul">Manajemen Matkul</a>
+                    </li>
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/all-user?role=admin">Tambah Matkul</a>
+                    </li>
+                    <li class="submenu-item @yield('allproduct')">
+                        <a href="/all-user?role=admin">Kelompok</a>
+                    </li>
+                </ul>
+            </li>
         </li>
     </ul>
 </div>
@@ -72,57 +90,6 @@
                     <div class="card-body px-4 py-4-5">
                         <div class="row">
                             <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                <div class="stats-icon purple mb-2">
-                                    <i class="iconly-boldProfile"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                <h6 class="text-muted font-semibold">Dosen</h6>
-                                <h6 class="font-extrabold mb-0">104</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 col-md-6">
-                <div class="card">
-                    <div class="card-body px-4 py-4-5">
-                        <div class="row">
-                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                <div class="stats-icon blue mb-2">
-                                    <i class="iconly-boldShow"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                <h6 class="text-muted font-semibold">Admin</h6>
-                                <h6 class="font-extrabold mb-0">5</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 col-md-6">
-                <div class="card">
-                    <div class="card-body px-4 py-4-5">
-                        <div class="row">
-                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                <div class="stats-icon green mb-2">
-                                    <i class="iconly-boldProfile"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                <h6 class="text-muted font-semibold">Kaprodi</h6>
-                                <h6 class="font-extrabold mb-0">1</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 col-md-6">
-                <div class="card">
-                    <div class="card-body px-4 py-4-5">
-                        <div class="row">
-                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                 <div class="stats-icon red mb-2">
                                     <i class="iconly-boldProfile"></i>
                                 </div>
@@ -133,51 +100,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Kirim Surat</h4>
-                </div>
-                <div class="card card-primary">
-                    <!-- /.card-header -->
-                    <!-- form start -->
-                    <form>
-                        <div class="card-body">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
-                            <div class="input-group">
-                            <div class="custom-file pe-2">
-                                <input type="file" class="custom-file-input" id="exampleInputFile">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                            </div>
-                            <div class="input-group-append">
-                                <span class="input-group-text">Upload</span>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        
-        <div class="row">
-            <div class="col-12 col-xl-4">
-                <div class="card">
-
-                </div>
-            </div>
-            <div class="col-12 col-xl-8">
-                <div class="card">
-
                 </div>
             </div>
         </div>
@@ -237,10 +159,11 @@
 </section>
 </div>
     </div>
-</div>
-<script src="assets/js/bootstrap.js"></script>
+</div> --}}
+@endsection
+{{-- <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/app.js"></script>
 
 <!-- Need: Apexcharts -->
 <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
+<script src="assets/js/pages/dashboard.js"></script> --}}

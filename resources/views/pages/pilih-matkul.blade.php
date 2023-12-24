@@ -55,7 +55,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K1</h4><hr>
+                                <h4 class="card-title">K1 (Kehadiran Mengajar Dosen)</h4><hr>
                                 @if ($k1==NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Jumlah Pertemuan 1</label>
@@ -108,7 +108,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">K7</h4><hr>
+                            <h4 class="card-title">K7 (Pembimbingan Tugas Akhir)</h4><hr>
                             @if ($k7 == NULL)
                             <div class="form-group">
                                 <label for="basicInput">Jumlah Mahasiswa</label>
@@ -160,7 +160,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">K8</h4><hr>
+                            <h4 class="card-title">K8 (Melaksanakan Tugas Pengawasan Ujian)</h4><hr>
                             @if ($k8 == NULL)
                             {{-- #penugasank8, --}}
                             <div class="form-group">
@@ -229,7 +229,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K9</h4><hr>
+                                <h4 class="card-title">K9 (Menguji Tugas Akhir)</h4><hr>
                                 @if ($k9 == NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Jumlah Penugasan</label>

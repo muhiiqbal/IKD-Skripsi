@@ -25,6 +25,7 @@ use App\Imports\csvImport;
 use App\Models\MasterNilai;
 use Illuminate\Http\Request;
 use App\Models\csvimpotmodel;
+use App\Models\Matkul;
 use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
 use Illuminate\Support\Facades\Auth;
 
@@ -42,10 +43,19 @@ class PagesController extends Controller
         $dosen = User::where('role', 'dosen')->get();
         $admin = User::where('role', 'admin')->get();
         $kaprodi = User::where('role','kaprodi')->get();
+        $dekan = User::where('role','dekan')->get();
 
         if (Auth::user()->role == 'admin') {
             $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
-        } else {
+
+        } 
+        elseif (Auth::user()->role == 'dekan') 
+        {
+            $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
+            $matkul= Matkul::all();
+        }
+        else
+        {
             $data = MasterNilai::with('user')->where('user_id' , Auth::user()->id)->orderBy('rata', 'DESC')->get();
         }
         
@@ -55,6 +65,9 @@ class PagesController extends Controller
             'total_dosen' => count($dosen) ,
             'total_admin'=>count($admin),
             'dosen' => $dosen,
+            'kaprodi' => $kaprodi,
+            'dekan' => $dekan,
+            'matkul'=>$matkul,
             'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5),
             'data' => $data,
         ]);
