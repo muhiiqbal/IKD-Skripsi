@@ -44,6 +44,7 @@ class PagesController extends Controller
         $admin = User::where('role', 'admin')->get();
         $kaprodi = User::where('role','kaprodi')->get();
         $dekan = User::where('role','dekan')->get();
+        $matkul = Matkul::all();
 
         if (Auth::user()->role == 'admin') {
             $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
@@ -52,9 +53,11 @@ class PagesController extends Controller
         elseif (Auth::user()->role == 'dekan') 
         {
             $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
-            $matkul= Matkul::all();
         }
-        else
+        elseif (Auth::user()->role == 'dosen')
+        {
+            $data = MasterNilai::with('user')->where('user_id' , Auth::user()->id)->orderBy('rata', 'DESC')->get();
+        }elseif (Auth::user()->role == 'kaprodi')
         {
             $data = MasterNilai::with('user')->where('user_id' , Auth::user()->id)->orderBy('rata', 'DESC')->get();
         }
@@ -67,7 +70,7 @@ class PagesController extends Controller
             'dosen' => $dosen,
             'kaprodi' => $kaprodi,
             'dekan' => $dekan,
-            'matkul'=>$matkul,
+            'matkul'=> $matkul,
             'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5),
             'data' => $data,
         ]);

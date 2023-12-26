@@ -10,7 +10,7 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Card</li>
                     </ol>
                 </nav>
@@ -41,7 +41,13 @@
                                 
                                 <div class="form-group">
                                     <label for="basicInput">Matkul</label>
-                                    <input type="text" class="form-control"   name="nama_matkul" >
+                                    <select class="form-control" name="nama_matkul" id="matkul">
+                                        <option value="" selected disabled>Pilih Matkul</option>
+                                        <option value="teknik_informatika">Teknik Informatika</option>
+                                        <option value="sistem_informasi">Sistem Informasi</option>
+                                        <option value="sistem_informasi">Ilmu Komunikasi</option>
+                                        <option value="sistem_informasi">Desain Komunikasi Visual</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="basicInput">SKS</label>
