@@ -79,14 +79,27 @@ class PagesController extends Controller
     public function kaprodi()
     {
         $dosen = User::where('role', 'kaprodi')->get();
+        $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
 
         return view('pages.kaprodi', [
-            'total_dosen' => count($dosen) ,
+            'total_dosen' => count($dosen),
             'dosen' => $dosen,
+            'data' => $data,
             'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
         ]);
-        
-        
+    }
+
+    public function rangkingdosen()
+    {
+        $dosen = User::where('role', 'rangkingdosen')->get();
+        $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
+
+        return view('pages.rangkingdosen', [
+            'total_dosen' => count($dosen) ,
+            'dosen' => $dosen,
+            'data' => $data,
+            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        ]);
     }
 
     public function dekan()

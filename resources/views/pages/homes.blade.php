@@ -202,73 +202,25 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Mata Kuliah</h4>
+                            <h4>Dashboard</h4>                            
+                            <table width="100%">
+                                <tr>
+                                    <td align="right">
+                                        <select>
+                                            <button>
+                                                <option value="pilihSemester">Pilih Semester</option>
+                                                <option value="semester1">Semester 1</option>
+                                                <option value="semester2">Semester 2</option>
+                                                <option value="semester3">Semester 3</option>
+                                            </button>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                         <div class="card-body">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                <table class="table table-hover" id="table1">
-                                    <thead>
-                                        <tr>
-                                            <th>Nama</th>
-                                            <th>sks</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($matkul as $a)
-                                        <tr>
-                                            <td>{{$a->nama_matkul}}</td>
-                                            <td>{{$a->sks}}</td>
-                                            <td>
-                                                <div class="btn-group mb-1">
-                                                    {{-- <a href="/pdf/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a> --}}
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Dashboard</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                <table class="table table-hover" id="table1">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>NIPD</th>
-                                            <th>NIPP</th>
-                                            <th>Nilai IKD</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($data as $a)
-                                        <tr>
-                                            <td>{{$a->user->name}}</td>
-                                            
-                                            {{-- <td>
-                                                <div class="btn-group mb-1">
-                                                    <a href="/pdf/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a>
-                                                </div>
-                                            </td> --}}
-                                            <td></td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                </div>
-                            </div>
+                            <img src="{{asset('temp/assets/images/GraphicChart.jpg')}}" 
+                            alt="Grafik" style="max-width:100%; height:auto;">
                         </div>
                     </div>
                 </div>
@@ -474,40 +426,29 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Mata Kuliah</h4>
+                            <h4>Dashboard</h4>
+                            <table width="100%">
+                                <tr>
+                                    <td align="right">
+                                        <select>
+                                            <button>
+                                                <option value="pilihSemester">Pilih Semester</option>
+                                                <option value="semester1">Semester 1</option>
+                                                <option value="semester2">Semester 2</option>
+                                                <option value="semester3">Semester 3</option>
+                                            </button>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                         <div class="card-body">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                <table class="table table-hover" id="table1">
-                                    <thead>
-                                        <tr>
-                                            <th>Nama</th>
-                                            <th>sks</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($matkul as $a)
-                                        <tr>
-                                            <td>{{$a->nama_matkul}}</td>
-                                            <td>{{$a->sks}}</td>
-                                            <td>
-                                                <div class="btn-group mb-1">
-                                                    {{-- <a href="/pdf/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a> --}}
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                </div>
-                            </div>
-                        </div>
+                            <img src="{{asset('temp/assets/images/GraphicChart.jpg')}}" 
+                            alt="Grafik" style="max-width:100%; height:auto;">
+                        </div>                      
                     </div>
                 </div>
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <div class="card">
                         <div class="card-header">
                             <h4>Dashboard</h4>
@@ -543,7 +484,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="col-12 col-lg-3">

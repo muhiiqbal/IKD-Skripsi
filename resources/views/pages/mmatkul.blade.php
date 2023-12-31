@@ -41,13 +41,6 @@
                                 
                                 <div class="form-group">
                                     <label for="basicInput">Matkul</label>
-                                    <select class="form-control" name="nama_matkul" id="matkul">
-                                        <option value="" selected disabled>Pilih Matkul</option>
-                                        <option value="teknik_informatika">Teknik Informatika</option>
-                                        <option value="sistem_informasi">Sistem Informasi</option>
-                                        <option value="sistem_informasi">Ilmu Komunikasi</option>
-                                        <option value="sistem_informasi">Desain Komunikasi Visual</option>
-                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="basicInput">SKS</label>
@@ -69,7 +62,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">Masukan Kelompok</h4>
+                            <h4 class="card-title">Masukan Matkul</h4>
                         </div>
                     </div>
                 </div>

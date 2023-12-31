@@ -37,6 +37,8 @@ Route::post('/mmatkul/tambahmatkul', [MatkulController::class, 'tambahmatkul']);
 Route::post('/mmatkul/tambahkelas', [MatkulController::class, 'kelas']);
 // dosen
 Route::get('/dosen', [PagesController::class, 'dosen']);
+//ranking dosen
+Route::get('/rankingdosen', [PagesController::class, 'rangkingdosen']);
 // input nilai
 Route::post('/input-nilai/{user}/storekawal', [NilaiController::class, 'storeawal']);
 Route::get('/input-nilai', [PagesController::class, 'inputnilai']);
