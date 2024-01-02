@@ -301,111 +301,34 @@
                 <li class="sidebar-item @yield('headproduct') has-sub">
                     <a href="#" class='sidebar-link'>
                         <i class="bi bi-people-fill"></i>
-                        <span>Dosen Program Studi</span>
+                        <span>Dosen</span>
                     </a>
-                    <style>
+                    {{-- <style>
                         .submenu {
                             padding-right: 30px; /* Tambahkan padding di sebelah kanan */
                         }
-                    </style>
-                    <ul class="submenu @yield('ulproduct')">
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link submenu-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span> Teknik Informatika </span>
-                            </a>
+                    </style> --}}
                             <ul class="submenu @yield('ulproduct')">
                                 <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
+                                    <a href="/pdf">Dosen 1</a>
                                 </li>
                                 <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
+                                    <a href="/pdf">Dosen 2</a>
+                                </li>
+                                <li class="submenu-item @yield('ulproduct')">
+                                    <a href="/pdf">Dosen 3</a>
+                                </li>
+                                <li class="submenu-item @yield('ulproduct')">
+                                    <a href="/pdf">Dosen 4</a>
+                                </li>
+                                <li class="submenu-item @yield('ulproduct')">
+                                    <a href="/pdf">Dosen 5</a>
+                                </li>
+                                <li class="submenu-item @yield('ulproduct')">
+                                    <a href="/pdf">Dosen 6</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Sistem Informasi</span>
-                            </a>
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Desain Komunikasi Visual</span>
-                            </a>
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Ilmu Komunikasi</span>
-                            </a>
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Teknik Informatika Kediri</span>
-                            </a>
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Sistem Informasi Kediri</span>
-                            </a>
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item @yield('headproduct') has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-people-fill"></i>
-                                <span>Desain Komunikasi Visual Kediri</span>
-                            </a>
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/rankingdosen">Dosen 2</a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </li>

@@ -115,16 +115,31 @@ class PagesController extends Controller
         
     }
 
-    public function pdf(User $user)
+    public function surat()
     {
-        $pdf = FacadePdf::setOption(['orientation' => 'l'])->loadview('pdff', [
-            'user' => User::where('id', $user->id)->first(), 
-            'nilai' => MasterNilai::where('user_id', $user->id)->first(),
-            'matkul' => Ambil::where('user_id', $user->id)->with('matkul')->with('kelas')->get()
-        ]);
-        
-        return $pdf->stream();
+        $dosen = User::where('role', 'surat')->get();
+        $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
 
+        return view('pages.surat', [
+            'total_dosen' => count($dosen) ,
+            'dosen' => $dosen,
+            'data' => $data,
+            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        ]);
+    }
+
+    public function pdf()
+    {
+        $dosen = User::where('role', 'pdf')->get();
+        $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
+
+        return view('pages.pdf', [
+            'total_dosen' => count($dosen) ,
+            'dosen' => $dosen,
+            'data' => $data,
+            'user' => $dosen,
+            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        ]);
     }
 
     public function ddashboard()
