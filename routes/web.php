@@ -41,7 +41,7 @@ Route::get('/dosen', [PagesController::class, 'dosen']);
 Route::get('/rankingdosen', [PagesController::class, 'rangkingdosen']);
 //surekom
 Route::get('/surat', [PagesController::class, 'surat']);
-Route::get('/pdf', [PagesController::class, 'pdf']);
+// Route::get('/pdf', [PagesController::class, 'pdf']);
 
 // input nilai
 Route::post('/input-nilai/{user}/storekawal', [NilaiController::class, 'storeawal']);
@@ -57,7 +57,7 @@ Route::post('/knn-import',[KnnController::class, 'import'])->name('knn-import');
 
 //PDF
 Route::get('/coba', [NilaiController::class, 'hitungrata']);
-Route::get('/pdf/{user}', [PagesController::class, 'pdf']);
+Route::get('/pdff/{user}', [PagesController::class, 'pdf']);
 
 // Route::get('/all-user', [PagesController::class, 'alluser']);
 // Route::get('/all-user/{user}/edit', [PagesController::class, 'edituser']);

@@ -22,12 +22,12 @@
                         @foreach ($data as $a)
                         <tr>
                             <td>{{$a->user->name}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$a->user->kode}}</td>
+                            <td>{{$a->user->staff}}</td>
+                            <td>{{$a->rata}}</td>
                             <td>
                                 <div class="btn-group mb-1">
-                                    <a href="/pdf/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a>
+                                    <a href="/pdff/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a>
                                 </div>
                             </td>
                             <td></td>

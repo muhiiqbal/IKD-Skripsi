@@ -91,7 +91,7 @@ class PagesController extends Controller
 
     public function rangkingdosen()
     {
-        $dosen = User::where('role', 'rangkingdosen')->get();
+        $dosen = User::where('role', 'dosen')->get();
         $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
 
         return view('pages.rangkingdosen', [
@@ -128,18 +128,15 @@ class PagesController extends Controller
         ]);
     }
 
-    public function pdf()
+    public function pdf(User $user)
     {
-        $dosen = User::where('role', 'pdf')->get();
-        $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
-
-        return view('pages.pdf', [
-            'total_dosen' => count($dosen) ,
-            'dosen' => $dosen,
-            'data' => $data,
-            'user' => $dosen,
-            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        $pdf = FacadePdf::setOption(['orientation' => 'l'])->loadview('pages.pdff', [
+            'user' => User::where('id', $user->id)->first(), 
+            'nilai' => MasterNilai::where('user_id', $user->id)->first(),
+            'matkul' => Ambil::where('user_id', $user->id)->with('matkul')->with('kelas')->get()
         ]);
+        
+        return $pdf->stream();
     }
 
     public function ddashboard()

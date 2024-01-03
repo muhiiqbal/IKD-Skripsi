@@ -310,13 +310,13 @@
                     </style> --}}
                             <ul class="submenu @yield('ulproduct')">
                                 <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdf">Dosen 1</a>
+                                    <a href="/pdff(($user-$id))">Dosen 1</a>
                                 </li>
                                 <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdf">Dosen 2</a>
+                                    <a href="/pdff">Dosen 2</a>
                                 </li>
                                 <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdf">Dosen 3</a>
+                                    <a href="/pdff">Dosen 3</a>
                                 </li>
                                 <li class="submenu-item @yield('ulproduct')">
                                     <a href="/pdf">Dosen 4</a>
