@@ -2,6 +2,7 @@
 @section('dashboard','active')
 @section('content')
 <div class="col-12">
+    <a href="/" class="btn btn-primary mb-3">Kembali</a>    
     <div class="card">
         <div class="card-header">
             <h4>Dashboard</h4>
@@ -22,12 +23,12 @@
                         @foreach ($data as $a)
                         <tr>
                             <td>{{$a->user->name}}</td>
-                            <td>{{$a->user->kode}}</td>
-                            <td>{{$a->user->staff}}</td>
+                            <td>{{$a->user->nipd}}</td>
+                            <td>{{$a->user->nipp}}</td>
                             <td>{{$a->rata}}</td>
                             <td>
                                 <div class="btn-group mb-1">
-                                    <a href="/pdff/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a>
+                                    <a href="/pdff/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm"> PDF</a>
                                 </div>
                             </td>
                             <td></td>

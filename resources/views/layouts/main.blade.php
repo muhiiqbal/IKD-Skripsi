@@ -303,31 +303,29 @@
                         <i class="bi bi-people-fill"></i>
                         <span>Dosen</span>
                     </a>
-                    {{-- <style>
-                        .submenu {
-                            padding-right: 30px; /* Tambahkan padding di sebelah kanan */
-                        }
-                    </style> --}}
-                            <ul class="submenu @yield('ulproduct')">
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdff(($user-$id))">Dosen 1</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdff">Dosen 2</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdff">Dosen 3</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdf">Dosen 4</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdf">Dosen 5</a>
-                                </li>
-                                <li class="submenu-item @yield('ulproduct')">
-                                    <a href="/pdf">Dosen 6</a>
-                                </li>
-                            </ul>
+                        <ul class="submenu @yield('ulproduct')">
+                            @foreach ($dosen as $b)
+                            <li class="submenu-item @yield('ulproduct')">
+                                <a href="/pdff/{{$b->id}}"  target="_blank" >{{$b->name}}</a>
+                            </li> 
+                            @endforeach
+                            
+                            {{-- <li class="submenu-item @yield('ulproduct')">
+                                <a href="pdf">Dosen 2</a>
+                            </li>
+                            <li class="submenu-item @yield('ulproduct')">
+                                <a href="pdf">Dosen 3</a>
+                            </li>
+                            <li class="submenu-item @yield('ulproduct')">
+                                <a href="pdf">Dosen 4</a>
+                            </li>
+                            <li class="submenu-item @yield('ulproduct')">
+                                <a href="pdf">Dosen 5</a>
+                            </li>
+                            <li class="submenu-item @yield('ulproduct')">
+                                <a href="pdf">Dosen 6</a>
+                            </li> --}}
+                        </ul>
                         </li>
                         </li>
                     </ul>

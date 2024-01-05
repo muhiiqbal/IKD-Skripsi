@@ -3,6 +3,7 @@
 @section('content')
 <div class="page-heading">
     <div class="page-title">
+        <a href="/" class="btn btn-primary mb-3">Kembali</a>
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
                 <h3>Pilih Mata Kuliah</h3>
@@ -63,6 +64,7 @@
                     <div class="card-content">
                         <div class="card-body">
                             <h4 class="card-title">Masukan Matkul</h4>
+                            {{-- <input type="text" class="form-control"   name=""> --}}
                         </div>
                     </div>
                 </div>
