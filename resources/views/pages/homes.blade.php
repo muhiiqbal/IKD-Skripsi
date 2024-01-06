@@ -92,8 +92,8 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>rata-rata</th>
-                                            <th>keterangan</th>
+                                            <th>Rata-Rata</th>
+                                            <th>Keterangan</th>
                                             <th>Rangking</th>
                                             <th>Detail</th>
                                             <th></th>
@@ -315,8 +315,8 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>rata-rata</th>
-                                            <th>keterangan</th>
+                                            <th>Rata-Rata</th>
+                                            <th>Keterangan</th>
                                             <th>Rangking</th>
                                             <th>Detail</th>
                                             <th></th>
@@ -332,7 +332,7 @@
                                             <td>{{$a->rank}}</td>
                                             <td>
                                                 <div class="btn-group mb-1">
-                                                    <a href="/pdf/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a>
+                                                    <a href="/pdff/{{$a->user_id}}" target="_blank" class="btn btn-primary btn-sm"> PDF</a>
                                                 </div>
                                             </td>
                                             <td></td>
