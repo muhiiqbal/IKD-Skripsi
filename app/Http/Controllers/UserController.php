@@ -36,6 +36,8 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->pass),
             'role' => $request->role,
+            'nipd' => $request->nipd,
+            'nipp' => $request->nipp,
         ]);
 
         return redirect('/all-user?role='.$request->role)->with('success', 'User Berhasil Dibuat');

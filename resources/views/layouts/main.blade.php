@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIPIAKAD 2023</title>
+    <title>SIPAKAD 2023</title>
 
     <link rel="stylesheet" href="{{asset('temp/assets/css/main/app.css')}}">
     <link rel="stylesheet" href="{{asset('temp/assets/css/main/app-dark.css')}}">
