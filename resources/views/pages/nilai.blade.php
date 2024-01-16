@@ -119,7 +119,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K3 (Kedisiplinan Menyerahkan Nilai Ujian)</h4><hr>
+                                <h4 class="card-title">K3</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Tanggal Penyerahan</label>
                                     @if ($k3 == NULL)
@@ -199,7 +199,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K4 (Pembuatan Bahan Ajar)</h4><hr>
+                                <h4 class="card-title">K4</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Bahan Ajar</label>
                                     @if ($k4 == NULL)
@@ -238,7 +238,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K5 (Umpan Balik Mahasiswa)</h4><hr>
+                                <h4 class="card-title">K5</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Score Quisioner</label>
                                     @if ($k5 == NULL)
@@ -263,7 +263,7 @@
                                 <div class="form-group">
                                     <label for="basicInput">Nilai K-5</label>
                                     @if ($k5 == NULL)
-                                    <input type="text" class="form-control" id="nilaik5" name="nakhirk5" oninput="hitungk5();">
+                                    <input type="text" class="form-control" id="nilaik5" name="nakhirk5" oninput="hitungk5();" value="0">
 
                                     @else
                                     <input type="text" class="form-control" id="nilaik5" name="nakhirk5"  oninput="hitungk5();" value="{{$k5->nakhir}}">
@@ -273,10 +273,10 @@
                                 <div class="form-group">
                                     <label for="basicInput">Nilai K-5 * 0.05</label>
                                     @if ($k5 == NULL)
-                                    <input type="text" class="form-control" id="nilai_akhirk5" name="nk5" onclick="hitungk5();">
+                                    <input type="text" class="form-control" id="nilai_akhirk5" name="nk5" value="0" onclick="hitungk5();">
 
                                     @else
-                                    <input type="text" class="form-control" id="nilai_akhirk5" name="nk5"value="{{$k5->n5}}"  onclick="hitungk5();">
+                                    <input type="text" class="form-control" id="nilai_akhirk5" name="nk5" value="{{$k5->n5}}"  onclick="hitungk5();">
 
                                     @endif
                                 </div>
@@ -288,11 +288,11 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K6 (Membuat Rencana Pembelajaran)</h4><hr>
+                                <h4 class="card-title">K6</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Bahan Ajar</label>
                                     @if ($k6 == NULL)
-                                    <input type="text" class="form-control" id="ajark6" name="bahan_ajark6" oninput="hitungk6();">
+                                    <input type="text" class="form-control" id="ajark6" name="bahan_ajark6" value="0" oninput="hitungk6();">
 
                                     @else
                                     <input type="text" class="form-control" id="ajark6" name="bahan_ajark6" value="{{$k6->total_rencana}}" oninput="hitungk6();">
@@ -302,7 +302,7 @@
                                 <div class="form-group">
                                     <label for="basicInput">Nilai K-6</label>
                                     @if ($k6 == NULL)
-                                    <input type="text" class="form-control" id="nilai_akhirk6" name="nakhirk6" oninput="hitungk6();">
+                                    <input type="text" class="form-control" id="nilai_akhirk6" name="nakhirk6" oninput="hitungk6();" value="0">
 
                                     @else
                                     <input type="text" class="form-control" id="nilai_akhirk6" name="nakhirk6" oninput="hitungk6();" value="{{$k6->nakhir}}">
@@ -375,22 +375,34 @@
             var dlk = document.getElementById('totalk5').value;
             var tdk = document.getElementById('totalratak5').value;
             var total = document.getElementById('nilaik5').value;
-            var totalk5 = parseInt(dlk) / parseInt(tdk);
-            document.getElementById('nilaik5').value = totalk5;
 
-            if(totalk5 >=100 ){
-                document.getElementById('nilaik5').value = 4 }
-            else if(totalk5 <90 && totalk5 >=78 ){
-                document.getElementById('nilaik5').value = 3 }
-            else if(totalk5 <77 && totalk5 >=52){
-                document.getElementById('nilaik5').value = 2 }
-            else if(totalk5 <51 && totalk5 >=26){
-                document.getElementById('nilaik5').value = 1 }
-            else if(totalk5 < 25 ){
-                document.getElementById('nilaik5').value = 0 }
-            
-            var hasil = parseFloat(total) * 0.05;
-            document.getElementById('nilai_akhirk5').value = hasil;
+            try {
+
+                var totalk5 = parseInt(dlk) / parseInt(tdk);
+
+                if (!isNaN(totalk5)) {
+
+                    document.getElementById('nilai_akhirk5').value = totalk5;
+    
+                    if(totalk5 >=100 ){
+                        document.getElementById('nilai_akhirk5').value = 4 }
+                    else if(totalk5 <90 && totalk5 >=78 ){
+                        document.getElementById('nilai_akhirk5').value = 3 }
+                    else if(totalk5 <77 && totalk5 >=52){
+                        document.getElementById('nilai_akhirk5').value = 2 }
+                    else if(totalk5 <51 && totalk5 >=26){
+                        document.getElementById('nilai_akhirk5').value = 1 }
+                    else if(totalk5 < 25 ){
+                        document.getElementById('nilai_akhirk5').value = 0 }
+                    
+                    var hasil = parseFloat(total) * 0.05;
+
+                    if (!isNaN(hasil)) {
+
+                        document.getElementById('nilai_akhirk5').value = hasil;
+                    }
+                }
+            } catch (err) {}
     }
     //k5
     
@@ -402,14 +414,21 @@
             var nilai= document.getElementById('nilaik6').value;
             var akhir = document.getElementById('nilai_akhirk6').value;
             
-            if(dlk == x ){
-                document.getElementById('nilai_akhirk6').value = 4;
-            }else if(dlk == y ){
-                document.getElementById('nilai_akhirk6').value = 0;
-            }
+            try {
 
-            var hasil = parseFloat(akhir) * 0.05;
-            document.getElementById('nilaik6').value = hasil;
+                if (dlk === x || dlk === y) {
+                    if(dlk == x){
+                        document.getElementById('nilai_akhirk6').value = 4;
+                    }else if(dlk == y){
+                        document.getElementById('nilai_akhirk6').value = 0;
+                    }
+
+                    var hasil = parseFloat(akhir) * 0.05;
+                    if (!isNaN(hasil)) {
+                        document.getElementById('nilaik6').value = hasil;
+                    }
+                }
+            } catch (err) {}
             
     }
     

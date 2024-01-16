@@ -23,7 +23,6 @@ class MatkulController extends Controller
             'sks' => $request->sks,
         ]);
         return redirect('/mmatkul')->with('success', 'Mata Kuliah Berhasil Ditambahkan');
-       
     }
 
     public function kelas(Request $request)

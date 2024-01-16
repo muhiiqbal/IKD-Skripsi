@@ -53,9 +53,9 @@
     </center>
     <table>
         <tr>
-            <td>NIDN</td>
+            <td>NIPD</td>
             <td>:</td>
-            <td>1234567890</td>
+            <td>{{ $user->nipd }}</td>
         </tr>
         <tr>
             <td>NAMA</td>
@@ -95,7 +95,7 @@
                 <th style="text-align: center">K12</th>
                 <th style="text-align: center">K13</th>
                 <th style="text-align: center">K14</th>
-                <th style="text-align: center">RATA-RATA</th>
+                <th style="text-align: center">Indeks Kinerja Dosen</th>
                 <th style="text-align: center">KETERANGAN</th>
                 <th style="text-align: center">RANGKING</th>
             </tr>

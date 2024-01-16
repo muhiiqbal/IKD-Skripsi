@@ -762,9 +762,9 @@
         var hasil = document.getElementById('bulat_k13').value;
 
         if (hasil >=8) {
-            document.getElementById('nilaik13').value = 4; 
+            document.getElementById('nilai_akhirk13').value = 4; 
         } else  {
-            document.getElementById('nilaik13').value = 0;
+            document.getElementById('nilai_akhirk13').value = 0;
         }
         var totalakhir = parseFloat(nilai) * 0.05;
         document.getElementById('nilai_akhirk13').value = totalakhir.toFixed(2);
@@ -796,9 +796,9 @@
         var hasil = document.getElementById('bulat_k12').value;
 
         if (hasil >=8) {
-            document.getElementById('nilaik12').value = 4; 
+            document.getElementById('nilai_akhirk12').value = 4; 
         } else  {
-            document.getElementById('nilaik12').value = 0;
+            document.getElementById('nilai_akhirk12').value = 0;
         }
 
         var totalakhir = parseFloat(nilai) * 0.05;
@@ -809,12 +809,12 @@
         let txtFirstNumberValue = document.getElementById('pengurangank14').value;
         let akhir = document.getElementById('nilai_akhirk14').value;
         let nilai = document.getElementById('nilaik14').value;
-        document.getElementById('nilaik14').value= txtFirstNumberValue;
+        // document.getElementById('nilaik14').value = txtFirstNumberValue;
 
         if(txtFirstNumberValue >=2 ){
-            document.getElementById('nilaik14').value = 0}
+            document.getElementById('nilai_akhirk14').value = 0}
         else if(txtFirstNumberValue <2 && txtFirstNumberValue >=0 ){
-            document.getElementById('nilaik14').value = 4}
+            document.getElementById('nilai_akhirk14').value = 4}
         
         var totalakhir = parseFloat(nilai) * 0.05;
         document.getElementById('nilai_akhirk14').value = totalakhir.toFixed(2);

@@ -15,8 +15,8 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                {{-- <h3>{{Str::title('all ' . request('role'))}}</h3> --}}
-                <h3>A</h3>
+                <h3>{{Str::title('all ' . request('role'))}}</h3>
+                <h3></h3>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -63,7 +63,7 @@
                                         <div class="dropdown-menu">
                                             @if (request('role') == 'dosen')
                                             <a class="dropdown-item" href="/all-user/{{$a->id}}/input-matkul?role=dosen"><i class="fa fa-edit"></i> Input Matkul</a>
-                                            <a class="dropdown-item" href="#delconfirm" data-bs-toggle="modal" data-bs-name="{{$a->name}}" data-bs-id="{{$a->id}}"><i class="fa fa-trash"></i> Delete</a>
+                                            {{-- <a class="dropdown-item" href="#delconfirm" data-bs-toggle="modal" data-bs-name="{{$a->name}}" data-bs-id="{{$a->id}}"><i class="fa fa-trash"></i> Delete</a> --}}
                                             @endif
                                         </div>
                                     </div>
@@ -78,54 +78,7 @@
         </div>
 
     </section>
-    <section class="section">
-        <div class="card">
-            <div class="card-header">
-                <a href="/all-user/add?role=dosen" class="btn btn-success rounded-pill"><i class="bi bi-plus-lg"></i> {{Str::title('Add ' . request('role'))}}</a>
-            </div>
-            <div class="card-body">
-                <table class="table table-hover" id="table1">
-                    <thead>
-                        <tr>
-                            <th>Email</th>
-                            <th>Name</th>
-                            {{-- <th>Phone</th> --}}
-                            <th>Role</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($user as $a)
-                        <tr>
-                            <td>{{$a->email}}</td>
-                            <td>{{$a->name}}</td>
-                            {{-- <td>{{$a->phone}}</td> --}}
-                            <td>{{Str::title($a->role)}}</td>
-                            <td>
-                                <div class="btn-group mb-1">
-                                    <div class="dropdown">
-                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Action
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            @if (request('role') == 'dosen')
-                                            <a class="dropdown-item" href="/all-user/{{$a->id}}/input-matkul?role=dosen"><i class="fa fa-edit"></i> Input Matkul</a>
-                                            <a class="dropdown-item" href="#delconfirm" data-bs-toggle="modal" data-bs-name="{{$a->name}}" data-bs-id="{{$a->id}}"><i class="fa fa-trash"></i> Delete</a>
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        @endforeach
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-    </section>
     <!-- Basic Tables end -->
 </div>
 

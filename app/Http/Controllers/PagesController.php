@@ -65,8 +65,10 @@ class PagesController extends Controller
         // dd(MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5));
     
         return view('pages.homes', [
-            'total_dosen' => count($dosen) ,
+            'total_dosen' => count($dosen),
             'total_admin'=>count($admin),
+            'total_dekan'=>count($dekan),
+            'total_kaprodi'=>count($kaprodi),
             'dosen' => $dosen,
             'kaprodi' => $kaprodi,
             'dekan' => $dekan,

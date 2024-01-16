@@ -117,9 +117,9 @@
                     <li class="submenu-item @yield('alldosen')">
                         <a href="/all-user?role=dosen">Dosen</a>
                     </li>
-                    <li class="submenu-item @yield('alladmin')">
+                    {{-- <li class="submenu-item @yield('alladmin')">
                         <a href="/all-user?role=admin">Admin</a>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </li>
@@ -144,11 +144,11 @@
                         <a href="/mmatkul">Manajemen Matkul</a>
                     </li>
                     <li class="submenu-item @yield('ulproduct')">
-                        <a href="/all-user?role=admin">Tambah Matkul</a>
+                        <a href="/all-user?role=dosen">Tambah Matkul</a>
                     </li>
-                    <li class="submenu-item @yield('ulproduct')">
+                    {{-- <li class="submenu-item @yield('ulproduct')">
                         <a href="/all-user?role=admin">Kelompok</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li
@@ -161,9 +161,9 @@
                     <li class="submenu-item @yield('alldosen')">
                         <a href="/all-user?role=dosen">Dosen</a>
                     </li>
-                    <li class="submenu-item @yield('alladmin')">
+                    {{-- <li class="submenu-item @yield('alladmin')">
                         <a href="/all-user?role=admin">User Management</a>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </li>
@@ -201,6 +201,19 @@
                 <i class="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
             </a>
+            <li class="sidebar-item @yield('headproduct') has-sub">
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Tahun Ajaran</span>
+                </a>
+                <ul class="submenu @yield('ulproduct')">
+                    <li class="submenu-item @yield('ulproduct')">
+                        <a href="/">Ganjil 2021</a>
+                    </li>
+                    <li class="submenu-item @yield('ulproduct')">
+                        <a href="/">Genap 2022</a>
+                    </li>
+                </ul>
             </li>
         @elseif (Auth::user()->role == 'dekan')
         <ul class="menu">

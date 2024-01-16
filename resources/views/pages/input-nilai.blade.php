@@ -40,7 +40,7 @@
                             {{-- <td>{{$a->phone}}</td> --}}
                             <td>
                                 <div class="btn-group mb-1">
-                                    <a href="/input-nilai/{{$a->id}}/pilih-matkul" class="btn btn-primary btn-sm">Pilih Matkul</a>
+                                    <a href="/input-nilai/{{$a->id}}/pilih-matkul" class="btn btn-primary btn-sm">Penilaian</a>
                                 </div>
                             </td>
                         </tr>

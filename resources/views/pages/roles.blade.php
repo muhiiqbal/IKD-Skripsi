@@ -37,7 +37,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($role as $a)
+                        @foreach ($dose as $a)
                         <tr>
                             <td>{{$a->name}}</td>
                             <td>{{$a->description}}</td>

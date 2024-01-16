@@ -54,9 +54,11 @@ class RegisterController extends Controller
             'staff' => ['required', 'string', 'max:10'],
             'kode' => ['required', 'string', 'max:10'],
             'telp' => ['required', 'string', 'max:15'],
+            // 'nipp' => ['required', 'string', 'max:11'],
+            // 'nipd' => ['required', 'string', 'max:11'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            
+            // 'role' => ['required', 'string', 'in:admin,dosen,dekan,kaprodi'],
 
         ]);
     }
@@ -75,8 +77,10 @@ class RegisterController extends Controller
             'kode' => $data['kode'],
             'telp' => $data['telp'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'role' =>$data['role'] = 'dosen',
+            // 'nipd' => $data['nipd'],
+            // 'nipp' => $data['nipp'],
+            'password' => Hash::make($data['password']), 
+            'role' =>$data['role'],
         ]);
     }
 }

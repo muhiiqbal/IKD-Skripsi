@@ -69,7 +69,11 @@ Route::get('/pdff/{user}', [PagesController::class, 'pdf']);
 // Route::post('/user/update', [UserController::class, 'updateuser']);
 // Route::post('/user/destroy', [UserController::class, 'deleteuser']);
 
-// Route::get('/roles/add', [RoleController::class, 'addrole']);
+Route::get('/roles/add', [RoleController::class, 'addrole']);
+Route::get('/all-user/{user}/edit', [RoleController::class, 'editrole']);
+// Route::post('/roles/store', [RoleController::class, 'storerole']);
+// Route::post('/roles/{user}/update', [RoleController::class, 'updaterole']);
+// Route::post('/roles/destroy', [RoleController::class, 'deleterole']);
 
 
 
