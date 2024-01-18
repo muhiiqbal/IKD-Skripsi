@@ -37,7 +37,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">K2 - K7 (Per Matkul)</h4>
+                            <h4 class="card-title">K2 - K6 (Per Matkul)</h4>
                             <h6 >{{$a->matkul->nama_matkul}} ({{$a->kelas->nama_kelas}})</h6>
                         </div>
 
@@ -56,7 +56,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K1</h4><hr>
+                                <h4 class="card-title">K1(Kehadiran Mengajar Dosen)</h4><hr>
                                 @if ($k1==NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Jumlah Pertemuan 1</label>
@@ -109,7 +109,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">K7</h4><hr>
+                            <h4 class="card-title">K7(Pembimbingan Tugas Akhir)</h4><hr>
                             @if ($k7 == NULL)
                             <div class="form-group">
                                 <label for="basicInput">Jumlah Mahasiswa</label>
@@ -161,7 +161,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">K8</h4><hr>
+                            <h4 class="card-title">K8(Melaksanakan Tugas Pengawasan Ujian)</h4><hr>
                             @if ($k8 == NULL)
                             {{-- #penugasank8, --}}
                             <div class="form-group">
@@ -230,7 +230,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K9</h4><hr>
+                                <h4 class="card-title">K9(Menguji Tugas Akhir)</h4><hr>
                                 @if ($k9 == NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Jumlah Penugasan</label>
@@ -284,7 +284,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K10</h4><hr>
+                                <h4 class="card-title">K10(Melakukan Kegiatan Penelitian / Karya Ilmiah)</h4><hr>
                                 @if ($k10 == NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Jumlah Penelitian</label>
@@ -320,7 +320,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K11</h4><hr>
+                                <h4 class="card-title">K11(Melakukan Kegiatan Pengabdian Kepada Masyarakat)</h4><hr>
                                 @if ($k11 == NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Jumlah Karya Ilmiah</label>
@@ -356,7 +356,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K12</h4><hr>
+                                <h4 class="card-title">K12(Pemenuhan Kehadiran Dosen di Kantor)</h4><hr>
                                 @if ($k12 == NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Tanggal Masuk</label>
@@ -449,7 +449,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K13</h4><hr>
+                                <h4 class="card-title">K13(Pemenuhan Jam Kerja Dosen Sebagai Pegawai)</h4><hr>
                                 @if ($k13 == NULL)
                                 <div class="form-group">
                                     <label for="basicInput">Tanggal Masuk</label>
@@ -542,7 +542,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K14</h4><hr>
+                                <h4 class="card-title">K14(Faktor Pengurang)</h4><hr>
                                 @if ($k14 == null)
                                 <div class="form-group">
                                     <label for="basicInput">Total Pengurangan</label>
@@ -574,7 +574,10 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- <div class="form-group">
+                    <label for="basicInput">Rata-Rata IKD</label>
+                    <input type="text" class="form-control" id="nilai_rata" name="nilai_rata" value="{{$nilai->rata}}";>
+                </div> --}}
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-content">

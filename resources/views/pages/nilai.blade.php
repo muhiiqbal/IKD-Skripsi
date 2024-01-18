@@ -119,7 +119,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K3</h4><hr>
+                                <h4 class="card-title">K3(Kedisiplinan Menyerahkan Nilai Ujian)</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Tanggal Penyerahan</label>
                                     @if ($k3 == NULL)
@@ -199,7 +199,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K4</h4><hr>
+                                <h4 class="card-title">K4(Pembuatan Bahan Ajar)</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Bahan Ajar</label>
                                     @if ($k4 == NULL)
@@ -238,7 +238,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K5</h4><hr>
+                                <h4 class="card-title">K5(Umpan Balik Mahasiswa)</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Score Quisioner</label>
                                     @if ($k5 == NULL)
@@ -288,7 +288,7 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
-                                <h4 class="card-title">K6</h4><hr>
+                                <h4 class="card-title">K6(Membuat Rencana Pembelajaran)</h4><hr>
                                 <div class="form-group">
                                     <label for="basicInput">Bahan Ajar</label>
                                     @if ($k6 == NULL)

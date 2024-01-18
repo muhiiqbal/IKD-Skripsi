@@ -76,7 +76,7 @@
                 <th rowspan="2">
                     KELAS
                 </th>
-                <th colspan="17" style="text-align: center">
+                <th colspan="15" style="text-align: center">
                     INDEKS KINERJA DOSEN 
                 </th>
             </tr>
@@ -95,9 +95,9 @@
                 <th style="text-align: center">K12</th>
                 <th style="text-align: center">K13</th>
                 <th style="text-align: center">K14</th>
-                <th style="text-align: center">Indeks Kinerja Dosen</th>
-                <th style="text-align: center">KETERANGAN</th>
-                <th style="text-align: center">RANGKING</th>
+                <th style="text-align: center">Rata-Rata IKD</th>
+                {{-- <th style="text-align: center">KETERANGAN</th> --}}
+                {{-- <th style="text-align: center">RANGKING</th> --}}
             </tr>
         </thead>
         <tbody style="text-align: center">
@@ -125,12 +125,12 @@
             <td>{{$nilai->n13}}</td>
             <td>{{$nilai->n14}}</td>
             <td>{{$nilai->rata}}</td>
-            <td>{{$nilai->keterangan}}</td>
-            <td>{{$nilai->rank}}</td>
-            
+            {{-- <td>{{$nilai->keterangan}}</td> --}}
+            {{-- <td>{{$nilai->rank}}</td> --}}
+
             @else
-            <td></td>
-            <td></td>
+            {{-- <td></td> --}}
+            {{-- <td></td> --}}
             <td></td>
             <td></td>
             <td></td>
