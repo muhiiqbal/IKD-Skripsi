@@ -60,10 +60,39 @@ class PagesController extends Controller
         }elseif (Auth::user()->role == 'kaprodi')
         {
             $data = MasterNilai::with('user')->where('user_id' , Auth::user()->id)->orderBy('rata', 'DESC')->get();
+        } else {
+
+            $data = [];
         }
+
+        if (!isset($data)) $data = [];
+        if (is_null($data)) $data = [];
+
+        $temp = [];
+        foreach ($data as $a) {
+            if (!is_null($a->user)) {
+                $temp []= $a;
+            }
+        }
+        $data = $temp;
+
+        // get data master nilai
+
+        $master = MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5);
+        
+        if (!isset($master)) $master = [];
+        if (is_null($master)) $master = [];
+
+        $temp = [];
+        foreach ($master as $a) {
+            if (!is_null($a->user)) {
+                $temp []= $a;
+            }
+        }
+        $master = $temp;
         
         // dd(MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5));
-    
+
         return view('pages.homes', [
             'total_dosen' => count($dosen),
             'total_admin'=>count($admin),
@@ -73,7 +102,7 @@ class PagesController extends Controller
             'kaprodi' => $kaprodi,
             'dekan' => $dekan,
             'matkul'=> $matkul,
-            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->paginate(5),
+            'master' => $master,
             'data' => $data,
         ]);
     }

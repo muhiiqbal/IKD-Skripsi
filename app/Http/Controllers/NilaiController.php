@@ -56,12 +56,14 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n1' => $request->nk1
+                // 'n1' => $request->nk1
+                'n1' => $request->nakhirk1
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n1' => $request->nk1
+                // 'n1' => $request->nk1
+                'n1' => $request->nakhirk1
             ]);
         }
 
@@ -86,12 +88,14 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n7' => $request->nk7,
+                // 'n7' => $request->nk7,
+                'n7' => $request->nakhirk7,
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n7' => $request->nk7
+                // 'n7' => $request->nk7,
+                'n7' => $request->nakhirk7,
             ]);
         }
 
@@ -121,12 +125,14 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n8' => $request->nk8
+                // 'n8' => $request->nk8
+                'n8' => $request->nakhirk8
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n8' => $request->nk8
+                // 'n8' => $request->nk8
+                'n8' => $request->nakhirk8
             ]);
         }
 
@@ -153,12 +159,14 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n9' => $request->nk9
+                // 'n9' => $request->nk9
+                'n9' => $request->nakhirk9
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n9' => $request->nk9
+                // 'n9' => $request->nk9
+                'n9' => $request->nakhirk9
             ]);
         }
 
@@ -180,12 +188,14 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n10' => $request->nk10
+                // 'n10' => $request->nk10
+                'n10' => $request->nakhirk10
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n10' => $request->nk10
+                // 'n10' => $request->nk10
+                'n10' => $request->nakhirk10
             ]);
         }
 
@@ -207,12 +217,16 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n11' => $request->nk11
+                // 'n11' => $request->nk11
+                'n11' => $request->nakhirk11
+
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n11' => $request->nk11
+                // 'n11' => $request->nk11
+                'n11' => $request->nakhirk11
+
             ]);
         }
 
@@ -248,12 +262,16 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n12' => $request->nk12
+                // 'n12' => $request->nk12
+                'n12' => $request->nakhirk12
+
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n12' => $request->nk12
+                // 'n12' => $request->nk12
+                'n12' => $request->nakhirk12
+
             ]);
         }
 
@@ -289,12 +307,16 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n13' => $request->nk13
+                // 'n13' => $request->nk13
+                'n13' => $request->nakhirk13
+
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n13' => $request->nk13
+                // 'n13' => $request->nk13
+                'n13' => $request->nakhirk13
+
             ]);
         }
 
@@ -316,12 +338,16 @@ class NilaiController extends Controller
 
         if (MasterNilai::where('user_id', $user->id)->exists()) {
             MasterNilai::where('user_id', $user->id)->update([
-                'n14' => $request->nk14
+                // 'n14' => $request->nk14
+                'n14' => $request->nakhirk14
+
             ]);
         } else {
             MasterNilai::create([
                 'user_id' => $user->id,
-                'n14' => $request->nk4
+                // 'n14' => $request->nk4
+                'n14' => $request->nakhirk14
+
             ]);
         }
 
@@ -343,7 +369,9 @@ class NilaiController extends Controller
         $jumlah1 = $n1 + $n2 + $n3 + $n4 + $n5 + $n6;
         $jumlah2 = $n7 + $n8 + $n9 + $n10 + $n11 + $n12 + $n13 + $n14;
         $jumlah = $jumlah1 + $jumlah2;
-        MasterNilai::where('user_id', $user->id)->update(['rata' => $jumlah]);
+        $rata = $jumlah / 14;
+        
+        MasterNilai::where('user_id', $user->id)->update(['rata' => $rata]);
 
         $data1 = MasterNilai::orderBy('rata', 'DESC')->get();
         $no = 1;
@@ -351,7 +379,6 @@ class NilaiController extends Controller
             MasterNilai::where('id', $h->id)->update(['rank' => $no]);
             $no++;
         }
-
 
         return back()->with('success', 'Data Berhasil Disimpan');
 
@@ -461,17 +488,17 @@ class NilaiController extends Controller
 
         //menghitung n2-6 untuk master nilai
         //N2
-        $datak2 = K2::where('user_id', $ambil->user_id)->get();
-        $nk2 = [];
-        // dd($datak2);
-        foreach($datak2 as $dk2){
-            $nk2[] = $dk2->n2;
-        }
-        $sk2 = 0;
-        for($i = 0; $i < count($nk2);$i++){
-            $sk2+=$nk2[$i];
-        }
-        $hk2 = $sk2/count($datak2);
+        // $datak2 = K2::where('user_id', $ambil->user_id)->get();
+        // $nk2 = [];
+        // // dd($datak2);
+        // foreach($datak2 as $dk2){
+        //     $nk2[] = $dk2->n2;
+        // }
+        // $sk2 = 0;
+        // for($i = 0; $i < count($nk2);$i++){
+        //     $sk2+=$nk2[$i];
+        // }
+        // $hk2 = $sk2/count($datak2);
         if (MasterNilai::where('user_id', $ambil->user_id)->exists()) {
             
         } else {
@@ -480,71 +507,76 @@ class NilaiController extends Controller
             ]);
         }
         MasterNilai::where('user_id', $ambil->user_id)->update([
-            'n2' => $hk2
+            // 'n2' => $hk2
+            'n2' => $request->nakhirk2
         ]);
         
         //N3
-        $datak3 = K3::where('user_id', $ambil->user_id)->get();
-        $nk3 = [];
-        // dd($datak3);
-        foreach($datak3 as $dk3){
-            $nk3[] = $dk3->n3;
-        }
-        $sk3 = 0;
-        for($i = 0; $i < count($nk3);$i++){
-            $sk3+=$nk3[$i];
-        }
-        $hk3 = $sk3/count($datak3);
+        // $datak3 = K3::where('user_id', $ambil->user_id)->get();
+        // $nk3 = [];
+        // // dd($datak3);
+        // foreach($datak3 as $dk3){
+        //     $nk3[] = $dk3->n3;
+        // }
+        // $sk3 = 0;
+        // for($i = 0; $i < count($nk3);$i++){
+        //     $sk3+=$nk3[$i];
+        // }
+        // $hk3 = $sk3/count($datak3);
         MasterNilai::where('user_id', $ambil->user_id)->update([
-            'n3' => $hk3
+            // 'n3' => $hk3
+            'n3' => $request->nakhirk3
         ]);
 
         //N4
-        $datak4 = K4::where('user_id', $ambil->user_id)->get();
-        $nk4 = [];
-        // dd($datak4);
-        foreach($datak4 as $dk4){
-            $nk4[] = $dk4->n4;
-        }
-        $sk4 = 0;
-        for($i = 0; $i < count($nk4);$i++){
-            $sk4+=$nk4[$i];
-        }
-        $hk4 = $sk4/count($datak4);
+        // $datak4 = K4::where('user_id', $ambil->user_id)->get();
+        // $nk4 = [];
+        // // dd($datak4);
+        // foreach($datak4 as $dk4){
+        //     $nk4[] = $dk4->n4;
+        // }
+        // $sk4 = 0;
+        // for($i = 0; $i < count($nk4);$i++){
+        //     $sk4+=$nk4[$i];
+        // }
+        // $hk4 = $sk4/count($datak4);
         MasterNilai::where('user_id', $ambil->user_id)->update([
-            'n4' => $hk4
+            // 'n4' => $hk4
+            'n4' => $request->nakhirk4
         ]);
 
         //N5
-        $datak5 = K5::where('user_id', $ambil->user_id)->get();
-        $nk5 = [];
-        // dd($datak5);
-        foreach($datak5 as $dk5){
-            $nk5[] = $dk5->n5;
-        }
-        $sk5 = 0;
-        for($i = 0; $i < count($nk5);$i++){
-            $sk5+=$nk5[$i];
-        }
-        $hk5 = $sk5/count($datak5);
+        // $datak5 = K5::where('user_id', $ambil->user_id)->get();
+        // $nk5 = [];
+        // // dd($datak5);
+        // foreach($datak5 as $dk5){
+        //     $nk5[] = $dk5->n5;
+        // }
+        // $sk5 = 0;
+        // for($i = 0; $i < count($nk5);$i++){
+        //     $sk5+=$nk5[$i];
+        // }
+        // $hk5 = $sk5/count($datak5);
         MasterNilai::where('user_id', $ambil->user_id)->update([
-            'n5' => $hk5
+            // 'n5' => $hk5
+            'n5' => $request->nakhirk5
         ]);
 
         //N6
-        $datak6 = K6::where('user_id', $ambil->user_id)->get();
-        $nk6 = [];
-        // dd($datak6);
-        foreach($datak6 as $dk6){
-            $nk6[] = $dk6->n6;
-        }
-        $sk6 = 0;
-        for($i = 0; $i < count($nk6);$i++){
-            $sk6+=$nk6[$i];
-        }
-        $hk6 = $sk6/count($datak6);
+        // $datak6 = K6::where('user_id', $ambil->user_id)->get();
+        // $nk6 = [];
+        // // dd($datak6);
+        // foreach($datak6 as $dk6){
+        //     $nk6[] = $dk6->n6;
+        // }
+        // $sk6 = 0;
+        // for($i = 0; $i < count($nk6);$i++){
+        //     $sk6+=$nk6[$i];
+        // }
+        // $hk6 = $sk6/count($datak6);
         MasterNilai::where('user_id', $ambil->user_id)->update([
-            'n6' => $hk6
+            // 'n6' => $hk6
+            'n6' => $request->nakhirk6
         ]);
 
         $data =  MasterNilai::where('user_id', $ambil->user_id)->first();
@@ -577,7 +609,8 @@ class NilaiController extends Controller
             $ket = 'Sangat Kurang';
         }
         
-        MasterNilai::where('user_id', $ambil->user_id)->update(['rata' => $jumlah, 'keterangan' =>$ket]);
+        $rata = $jumlah / 14;
+        MasterNilai::where('user_id', $ambil->user_id)->update(['rata' => $rata, 'keterangan' =>$ket]);
         
         return redirect('/input-nilai/'. $ambil->user_id .'/pilih-matkul')->with('success', 'Data Berhasil Disimpan');
     }
