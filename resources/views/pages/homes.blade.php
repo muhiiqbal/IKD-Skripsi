@@ -219,7 +219,7 @@
                             </table>
                         </div>
                         <div class="card-body">
-                            <img src="{{asset('temp/assets/images/GraphicChart.jpg')}}" 
+                            <img src="{{asset('temp/assets/images/indekskinerja.jpg')}}" 
                             alt="Grafik" style="max-width:100%; height:auto;">
                         </div>
                     </div>
@@ -443,7 +443,7 @@
                             </table>
                         </div>
                         <div class="card-body">
-                            <img src="{{asset('temp/assets/images/GraphicChart.jpg')}}" 
+                            <img src="{{asset('temp/assets/images/indekskinerja.jpg')}}" 
                             alt="Grafik" style="max-width:100%; height:auto;">
                         </div>                      
                     </div>
