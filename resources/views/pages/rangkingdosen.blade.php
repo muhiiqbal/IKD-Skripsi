@@ -17,6 +17,8 @@
                             <th>NIPD</th>
                             <th>NIPP</th>
                             <th>Nilai IKD</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,4 +43,12 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+
+<script>
+    $(document).ready(function() {
+        $('#table1').DataTable();
+    } );
+</script>
 @endsection

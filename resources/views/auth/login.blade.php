@@ -77,7 +77,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Mazer Admin Dashboard</title>
+    <title>Apik-Dos</title>
     <link rel="stylesheet" href="{{asset('temp/assets/css/main/app.css')}}">
     <link rel="stylesheet" href="{{asset('temp/assets/css/pages/auth.css')}}">
     <link rel="shortcut icon" href="{{asset('temp/assets/images/logo/favicon.svg')}}" type="image/x-icon">
@@ -91,7 +91,7 @@
     <div class="col-lg-5 col-12">
         <div id="auth-left">
             <div class="auth-logo">
-                <a href="/"><img src="{{asset('temp/assets/images/logo/logo.svg')}}" alt="Logo"></a>
+                <a href="/ddashboard"><img src="{{asset('temp/assets/images/logo/favicon.png')}}" alt="Logo" srcset="">&nbsp;&nbsp;&nbsp;<span style="font-size: 20px;"><b>Apik-Dos</b></span></a>            
             </div>
             <h1 class="auth-title">Log in.</h1>
             <p class="auth-subtitle mb-5">Login Dengan Akun yang sudah di siapkan oleh Administrator.</p>

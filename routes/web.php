@@ -39,6 +39,8 @@ Route::post('/mmatkul/tambahkelas', [MatkulController::class, 'kelas']);
 Route::get('/dosen', [PagesController::class, 'dosen']);
 //ranking dosen
 Route::get('/rankingdosen', [PagesController::class, 'rangkingdosen']);
+//comingsoon
+Route::get('/comingsoon', [PagesController::class, 'comingsoon']);
 //surekom
 Route::get('/surat', [PagesController::class, 'surat']);
 // Route::get('/pdf', [PagesController::class, 'pdf']);

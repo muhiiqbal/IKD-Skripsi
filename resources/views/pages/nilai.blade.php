@@ -374,27 +374,30 @@
     function hitungk5(){
             var dlk = document.getElementById('totalk5').value;
             var tdk = document.getElementById('totalratak5').value;
-            var total = document.getElementById('nilaik5').value;
 
             try {
 
-                var totalk5 = parseInt(dlk) / parseInt(tdk);
+                var rata = parseFloat(tdk);
+                var totalk5 = parseInt(dlk) / ((100 - rata) / 10.0);
 
                 if (!isNaN(totalk5)) {
 
-                    document.getElementById('nilai_akhirk5').value = totalk5;
+                    // document.getElementById('nilaik5').value = 0;
     
-                    if(totalk5 >=100 ){
-                        document.getElementById('nilai_akhirk5').value = 4 }
-                    else if(totalk5 <90 && totalk5 >=78 ){
-                        document.getElementById('nilai_akhirk5').value = 3 }
-                    else if(totalk5 <77 && totalk5 >=52){
-                        document.getElementById('nilai_akhirk5').value = 2 }
-                    else if(totalk5 <51 && totalk5 >=26){
-                        document.getElementById('nilai_akhirk5').value = 1 }
-                    else if(totalk5 < 25 ){
-                        document.getElementById('nilai_akhirk5').value = 0 }
+                    // if(totalk5 >=100 ){
+                    //     document.getElementById('nilaik5').value = 4 }
+                    // else if(totalk5 <90 && totalk5 >=78 ){
+                    //     document.getElementById('nilaik5').value = 3 }
+                    // else if(totalk5 <77 && totalk5 >=52){
+                    //     document.getElementById('nilaik5').value = 2 }
+                    // else if(totalk5 <51 && totalk5 >=26){
+                    //     document.getElementById('nilaik5').value = 1 }
+                    // else if(totalk5 < 25 ){
+                    //     document.getElementById('nilaik5').value = 0 }
+
+                    document.getElementById('nilaik5').value = Math.ceil(4 * rata / 100);
                     
+                    var total = document.getElementById('nilaik5').value;
                     var hasil = parseFloat(total) * 0.05;
 
                     if (!isNaN(hasil)) {

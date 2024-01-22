@@ -370,6 +370,7 @@ class NilaiController extends Controller
         $jumlah2 = $n7 + $n8 + $n9 + $n10 + $n11 + $n12 + $n13 + $n14;
         $jumlah = $jumlah1 + $jumlah2;
         $rata = $jumlah / 14;
+        $rata = ((float) $rata - (int) $rata) == 0 ? (string) $rata : rtrim(sprintf("%.2f", $rata), "0");
         
         MasterNilai::where('user_id', $user->id)->update(['rata' => $rata]);
 
@@ -610,6 +611,8 @@ class NilaiController extends Controller
         }
         
         $rata = $jumlah / 14;
+        $rata = ((float) $rata - (int) $rata) == 0 ? (string) $rata : rtrim(sprintf("%.2f", $rata), "0");
+        
         MasterNilai::where('user_id', $ambil->user_id)->update(['rata' => $rata, 'keterangan' =>$ket]);
         
         return redirect('/input-nilai/'. $ambil->user_id .'/pilih-matkul')->with('success', 'Data Berhasil Disimpan');

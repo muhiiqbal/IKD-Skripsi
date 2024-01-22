@@ -125,7 +125,29 @@ class PagesController extends Controller
         $dosen = User::where('role', 'dosen')->get();
         $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
 
+        $temp = [];
+        foreach ($data as $a) {
+            if (isset($a->user) && !is_null($a->user))
+            {
+                $temp []= $a;
+            }
+        }
+
+        $data = $temp;
         return view('pages.rangkingdosen', [
+            'total_dosen' => count($dosen) ,
+            'dosen' => $dosen,
+            'data' => $data,
+            'master' => MasterNilai::with('user')->orderBy('rata', 'DESC')->get(),
+        ]);
+    }
+
+    public function comingsoon()
+    {
+        $dosen = User::where('role', 'dosen')->get();
+        $data = MasterNilai::with('user')->orderBy('rata', 'DESC')->get();
+
+        return view('pages.comingsoon', [
             'total_dosen' => count($dosen) ,
             'dosen' => $dosen,
             'data' => $data,
